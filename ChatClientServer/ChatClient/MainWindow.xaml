@@ -5,8 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ChatClient"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="325" Width="500">
     <Grid>
-        
+        <Label x:Name="TitleLbl" Content="Chat client" HorizontalAlignment="Left" Margin="225,10,0,0" VerticalAlignment="Top"/>
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,40,0,0" Orientation="Horizontal">
+            <Label x:Name="UsernameLbl" Content="Username:"/>
+            <TextBox x:Name="UsernameTbx" Height="30" TextWrapping="Wrap" Width="300"/>
+            <Button x:Name="UsernameBtn" Content="OK" Margin="10,0,0,0" Width="50" RenderTransformOrigin="0.504,0.5" Click="UsernameBtn_Click"/>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,85,0,0" Orientation="Horizontal">
+            <StackPanel>
+                <Label x:Name="SendLbl" Content="Send:"/>
+                <Border BorderBrush="Black" BorderThickness="1">
+                    <TextBox x:Name="SendTbl" Width="200" Height="160" TextWrapping="Wrap" KeyDown="KeyDownEnter"/>
+                </Border>
+            </StackPanel>
+            <Button x:Name="SendBtn" Content="Send" Height="25" Margin="10,0,0,0" Click="SendBtn_Click"/>
+            <StackPanel Margin="10,0,0,0">
+                <Label x:Name="ReceiveLbl" Content="Receive:"/>
+                <Border BorderBrush="Black" BorderThickness="1">
+                    <TextBlock x:Name="ReceiveTbl" Width="200" Height="160"/>
+                </Border>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Window>

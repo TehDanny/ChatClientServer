@@ -24,5 +24,23 @@ namespace ChatClient
         {
             InitializeComponent();
         }
+
+        private void UsernameBtn_Click(object sender, RoutedEventArgs e)
+        {
+            IsEnabled = false;
+        }
+
+        private void KeyDownEnter(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                SendBtn_Click(sender, e);
+            }
+        }
+
+        private void SendBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
